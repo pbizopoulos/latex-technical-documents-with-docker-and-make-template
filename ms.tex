@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{datatool}
+\usepackage{graphicx}
+
+\begin{document}
+\DTLloaddb{keys_values}{tmp/keys-values.csv}
+
+\title{A Makefile for Developing Containerized \LaTeX\ Technical Documents Template}
+
+\author{First author
+\thanks{First author is with Affiliation, Town, Country e-mail: first@author.com}}
+
+\maketitle
+
+\begin{abstract}
+	This is the abstract.
+\end{abstract}
+
+\section{Introduction}
+This is a citation~\cite{author2000title}.
+
+\section{Methods}
+
+\begin{figure}
+	\includegraphics[width=\linewidth]{tmp/image.png}
+	\caption{Image example created from results code.}\label{fig:image}
+\end{figure}
+
+\begin{table}
+	\centering
+	\caption{Table example created from results code.}\label{table:table}
+	\setlength\tabcolsep{4.2pt}
+	\input{tmp/table.tex}
+\end{table}
+
+\bibliography{ms.bib}
+\bibliographystyle{plain}
+\end{document}
